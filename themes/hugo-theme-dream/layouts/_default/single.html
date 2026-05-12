@@ -78,10 +78,14 @@
         {{ if and .Params.Cover site.Params.showSummaryCoverInPost }}
           <figure>
             {{ $cover := .Params.Cover }}
-            {{ if or (hasPrefix $cover "http://") (hasPrefix $cover "https://") }}
-            <img class="z-30" src="{{ $cover }}" alt="{{ .Title }}" />
+            {{ with .Resources.Get $cover }}
+            <img class="z-30" src="{{ .RelPermalink }}" alt="{{ $.Title }}" />
             {{ else }}
-            <img class="z-30" src="{{ strings.TrimPrefix "/" $cover | relURL }}" alt="{{ .Title }}" />
+              {{ if or (hasPrefix $cover "http://") (hasPrefix $cover "https://") }}
+              <img class="z-30" src="{{ $cover }}" alt="{{ $.Title }}" />
+              {{ else }}
+              <img class="z-30" src="{{ strings.TrimPrefix "/" $cover | relURL }}" alt="{{ $.Title }}" />
+              {{ end }}
             {{ end }}
             {{ with .Params.covercaption }}
               <figcaption class="text-sm italic text-center mt-2">{{ . }}</figcaption>
