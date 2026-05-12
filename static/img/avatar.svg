@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Wind Notes avatar">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#34d399"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="160" rx="80" fill="url(#sky)"/>
+  <path d="M33 96c24-38 53-52 94-42-22 2-39 12-52 29 24-9 42-8 54 4-34-2-59 8-76 31-8-5-15-12-20-22z" fill="#ecfeff"/>
+  <circle cx="104" cy="50" r="12" fill="#fef3c7"/>
+</svg>

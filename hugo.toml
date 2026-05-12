@@ -1,0 +1,46 @@
+baseURL = "https://example.com/"
+title = "Wind Notes"
+theme = "hugo-theme-dream"
+defaultContentLanguage = "zh"
+locale = "zh-cn"
+hasCJKLanguage = true
+enableRobotsTXT = true
+summaryLength = 70
+
+[pagination]
+pagerSize = 12
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+
+[params]
+lightTheme = "emerald"
+darkTheme = "forest"
+author = "Wind Notes"
+description = "记录生活、旅行和技术的个人博客。"
+avatar = "img/avatar.svg"
+headerTitle = "Wind Notes"
+motto = "把日常写成地图"
+siteStartYear = 2026
+rss = true
+stickyNav = false
+reorderNavItems = ["posts", "categories", "tags", "search", "rss", "about"]
+collapseNavItems = ["posts", "categories", "tags"]
+showTableOfContents = true
+imageZoomableInPost = true
+showSummaryCoverInPost = true
+showPrevNextPost = true
+
+# Waline is enabled after you deploy a Waline server.
+# waline = true
+# walineServer = "https://your-waline-server.vercel.app"
+
+[params.experimental]
+jsDate = true
+jsDateFormat = "yyyy-MM-dd"
