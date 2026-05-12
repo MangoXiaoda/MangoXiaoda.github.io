@@ -12,7 +12,12 @@
       </picture>
     {{ end }}
     {{ else }}
-    <img src="{{ .Params.cover }}" alt="{{ .Title }}" />
+    {{ $cover := .Params.cover }}
+    {{ if or (hasPrefix $cover "http://") (hasPrefix $cover "https://") }}
+    <img src="{{ $cover }}" alt="{{ .Title }}" />
+    {{ else }}
+    <img src="{{ strings.TrimPrefix "/" $cover | relURL }}" alt="{{ .Title }}" />
+    {{ end }}
     {{ end }}
   </figure>
   {{ else if not site.Params.noDefaultSummaryCover }}

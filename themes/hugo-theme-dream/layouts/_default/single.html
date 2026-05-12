@@ -77,7 +77,12 @@
       <section id="dream-single-post-content" itemprop="articleBody">
         {{ if and .Params.Cover site.Params.showSummaryCoverInPost }}
           <figure>
-            <img class="z-30" src="{{ .Params.Cover }}" alt="{{ .Title }}" />
+            {{ $cover := .Params.Cover }}
+            {{ if or (hasPrefix $cover "http://") (hasPrefix $cover "https://") }}
+            <img class="z-30" src="{{ $cover }}" alt="{{ .Title }}" />
+            {{ else }}
+            <img class="z-30" src="{{ strings.TrimPrefix "/" $cover | relURL }}" alt="{{ .Title }}" />
+            {{ end }}
             {{ with .Params.covercaption }}
               <figcaption class="text-sm italic text-center mt-2">{{ . }}</figcaption>
             {{ end }}
