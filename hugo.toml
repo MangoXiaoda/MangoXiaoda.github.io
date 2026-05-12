@@ -1,4 +1,4 @@
-baseURL = "https://mangoxiaoda.github.io/wind-dream-cms-blog/"
+baseURL = "https://mangoxiaoda.github.io/"
 title = "Wind Notes"
 theme = "hugo-theme-dream"
 defaultContentLanguage = "zh"

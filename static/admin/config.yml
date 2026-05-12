@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: MangoXiaoda/wind-dream-cms-blog
+  repo: MangoXiaoda/MangoXiaoda.github.io
   branch: main
   # GitHub Pages production editing needs an OAuth proxy.
   # base_url: https://your-oauth-proxy.example.com
