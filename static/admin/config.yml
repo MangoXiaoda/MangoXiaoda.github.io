@@ -42,7 +42,7 @@ collections:
         name: author
         widget: string
         required: false
-        default: "Wind Notes"
+        default: "夏天去旅行"
       - label: 封面
         name: cover
         widget: image

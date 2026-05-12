@@ -2,7 +2,7 @@
 title: "第一篇博客"
 date: 2026-05-12T15:30:00+08:00
 lastmod: 2026-05-12T15:30:00+08:00
-author: "Wind Notes"
+author: "夏天去旅行"
 cover: "/img/sample-cover.svg"
 categories:
   - "生活"
