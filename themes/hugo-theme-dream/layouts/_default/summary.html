@@ -45,11 +45,11 @@
 
     {{ with .Params.tags }}
     {{ $tagStyles := shuffle (slice
-      "--tag-light-bg:#fff1f2;--tag-light-border:#fb7185;--tag-light-text:#9f1239;--tag-dark-bg:rgba(251,113,133,.12);--tag-dark-border:rgba(251,113,133,.30);--tag-dark-text:#fda4af;"
-      "--tag-light-bg:#eff6ff;--tag-light-border:#60a5fa;--tag-light-text:#1d4ed8;--tag-dark-bg:rgba(96,165,250,.12);--tag-dark-border:rgba(96,165,250,.30);--tag-dark-text:#93c5fd;"
-      "--tag-light-bg:#ecfdf5;--tag-light-border:#34d399;--tag-light-text:#047857;--tag-dark-bg:rgba(52,211,153,.12);--tag-dark-border:rgba(52,211,153,.30);--tag-dark-text:#6ee7b7;"
-      "--tag-light-bg:#fffbeb;--tag-light-border:#f59e0b;--tag-light-text:#b45309;--tag-dark-bg:rgba(245,158,11,.12);--tag-dark-border:rgba(245,158,11,.30);--tag-dark-text:#fcd34d;"
-      "--tag-light-bg:#f5f3ff;--tag-light-border:#a78bfa;--tag-light-text:#6d28d9;--tag-dark-bg:rgba(167,139,250,.12);--tag-dark-border:rgba(167,139,250,.30);--tag-dark-text:#c4b5fd;"
+      "--tag-light-bg:#fff1f2;--tag-light-border:#fb7185;--tag-light-text:#9f1239;--tag-dark-bg:rgba(244,114,182,.14);--tag-dark-border:rgba(244,114,182,.55);--tag-dark-text:#f9a8d4;"
+      "--tag-light-bg:#eff6ff;--tag-light-border:#60a5fa;--tag-light-text:#1d4ed8;--tag-dark-bg:rgba(96,165,250,.14);--tag-dark-border:rgba(96,165,250,.55);--tag-dark-text:#93c5fd;"
+      "--tag-light-bg:#ecfdf5;--tag-light-border:#34d399;--tag-light-text:#047857;--tag-dark-bg:rgba(52,211,153,.14);--tag-dark-border:rgba(52,211,153,.55);--tag-dark-text:#6ee7b7;"
+      "--tag-light-bg:#fffbeb;--tag-light-border:#f59e0b;--tag-light-text:#b45309;--tag-dark-bg:rgba(251,191,36,.14);--tag-dark-border:rgba(251,191,36,.55);--tag-dark-text:#fde68a;"
+      "--tag-light-bg:#f5f3ff;--tag-light-border:#a78bfa;--tag-light-text:#6d28d9;--tag-dark-bg:rgba(196,181,253,.14);--tag-dark-border:rgba(196,181,253,.55);--tag-dark-text:#c4b5fd;"
     ) }}
     <div class="card-actions" style="justify-content: flex-end; margin-top: 0.75rem;">
       {{ range $index, $tag := . }}

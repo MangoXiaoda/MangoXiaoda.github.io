@@ -3159,6 +3159,6 @@ html.dark .dream-tag-badge {
   --badge-bg: var(--tag-dark-bg);
   --badge-color: var(--tag-dark-border);
   --badge-fg: var(--tag-dark-text);
-  font-weight: 500;
+  font-weight: 400;
   box-shadow: none;
 }
