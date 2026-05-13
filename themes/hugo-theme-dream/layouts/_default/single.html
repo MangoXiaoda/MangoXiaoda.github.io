@@ -51,9 +51,6 @@
           {{ else }}
             {{ .Date | time.Format "Monday, Jan 2, 2006" }}
           {{ end }}
-
-          | <span>{{ .ReadingTime }}{{ T "minuteRead" .ReadingTime }}</span>
-
           {{ if ne .Params.nolastmod true }}
           | <span>{{ T "updatedAt" }}
             {{ if site.Params.Experimental.jsDate }}

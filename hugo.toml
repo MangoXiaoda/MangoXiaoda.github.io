@@ -26,7 +26,7 @@ author = "夏天去旅行"
 description = "记录生活、旅行和技术的个人博客。"
 avatar = "img/avatar.jpg"
 headerTitle = "夏天去旅行"
-motto = "✦"
+motto = "✦ blog ✦"
 siteStartYear = 2026
 favicon = "<link rel=\"icon\" href=\"/img/avatar.jpg\" type=\"image/jpeg\" />"
 rss = true
