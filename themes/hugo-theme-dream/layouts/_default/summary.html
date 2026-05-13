@@ -45,16 +45,16 @@
 
     {{ with .Params.tags }}
     {{ $tagStyles := shuffle (slice
-      "--badge-bg:rgba(244,114,182,.14);--badge-color:rgba(244,114,182,.55);--badge-fg:#f9a8d4;"
-      "--badge-bg:rgba(96,165,250,.14);--badge-color:rgba(96,165,250,.55);--badge-fg:#93c5fd;"
-      "--badge-bg:rgba(52,211,153,.14);--badge-color:rgba(52,211,153,.55);--badge-fg:#6ee7b7;"
-      "--badge-bg:rgba(251,191,36,.14);--badge-color:rgba(251,191,36,.55);--badge-fg:#fde68a;"
-      "--badge-bg:rgba(196,181,253,.14);--badge-color:rgba(196,181,253,.55);--badge-fg:#c4b5fd;"
+      "--badge-bg:#fff1f2;--badge-color:#fb7185;--badge-fg:#9f1239;"
+      "--badge-bg:#eff6ff;--badge-color:#60a5fa;--badge-fg:#1d4ed8;"
+      "--badge-bg:#ecfdf5;--badge-color:#34d399;--badge-fg:#047857;"
+      "--badge-bg:#fffbeb;--badge-color:#f59e0b;--badge-fg:#b45309;"
+      "--badge-bg:#f5f3ff;--badge-color:#a78bfa;--badge-fg:#6d28d9;"
     ) }}
     <div class="card-actions" style="justify-content: flex-end; margin-top: 0.75rem;">
       {{ range $index, $tag := . }}
       {{ $tagStyle := index $tagStyles (mod $index (len $tagStyles)) }}
-      <span class="badge text-xs" style="{{ printf "%s--size:1.25rem;font-size:.72rem;line-height:1;" $tagStyle | safeCSS }}">#{{ $tag }}</span>
+      <span class="badge text-xs" style="{{ printf "%s--size:1.25rem;font-size:.72rem;font-weight:600;line-height:1;box-shadow:0 1px 2px rgba(15,23,42,.08);" $tagStyle | safeCSS }}">#{{ $tag }}</span>
       {{ end }}
     </div>
     {{ end }}
