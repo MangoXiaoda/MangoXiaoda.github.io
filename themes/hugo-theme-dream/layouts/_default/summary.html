@@ -45,16 +45,16 @@
 
     {{ with .Params.tags }}
     {{ $tagStyles := shuffle (slice
-      "--badge-bg:#fff1f2;--badge-color:#fb7185;--badge-fg:#9f1239;"
-      "--badge-bg:#eff6ff;--badge-color:#60a5fa;--badge-fg:#1d4ed8;"
-      "--badge-bg:#ecfdf5;--badge-color:#34d399;--badge-fg:#047857;"
-      "--badge-bg:#fffbeb;--badge-color:#f59e0b;--badge-fg:#b45309;"
-      "--badge-bg:#f5f3ff;--badge-color:#a78bfa;--badge-fg:#6d28d9;"
+      "--tag-light-bg:#fff1f2;--tag-light-border:#fb7185;--tag-light-text:#9f1239;--tag-dark-bg:rgba(251,113,133,.12);--tag-dark-border:rgba(251,113,133,.30);--tag-dark-text:#fda4af;"
+      "--tag-light-bg:#eff6ff;--tag-light-border:#60a5fa;--tag-light-text:#1d4ed8;--tag-dark-bg:rgba(96,165,250,.12);--tag-dark-border:rgba(96,165,250,.30);--tag-dark-text:#93c5fd;"
+      "--tag-light-bg:#ecfdf5;--tag-light-border:#34d399;--tag-light-text:#047857;--tag-dark-bg:rgba(52,211,153,.12);--tag-dark-border:rgba(52,211,153,.30);--tag-dark-text:#6ee7b7;"
+      "--tag-light-bg:#fffbeb;--tag-light-border:#f59e0b;--tag-light-text:#b45309;--tag-dark-bg:rgba(245,158,11,.12);--tag-dark-border:rgba(245,158,11,.30);--tag-dark-text:#fcd34d;"
+      "--tag-light-bg:#f5f3ff;--tag-light-border:#a78bfa;--tag-light-text:#6d28d9;--tag-dark-bg:rgba(167,139,250,.12);--tag-dark-border:rgba(167,139,250,.30);--tag-dark-text:#c4b5fd;"
     ) }}
     <div class="card-actions" style="justify-content: flex-end; margin-top: 0.75rem;">
       {{ range $index, $tag := . }}
       {{ $tagStyle := index $tagStyles (mod $index (len $tagStyles)) }}
-      <span class="badge text-xs" style="{{ printf "%s--size:1.25rem;font-size:.72rem;font-weight:600;line-height:1;box-shadow:0 1px 2px rgba(15,23,42,.08);" $tagStyle | safeCSS }}">#{{ $tag }}</span>
+      <span class="badge text-xs dream-tag-badge" style="{{ $tagStyle | safeCSS }}">#{{ $tag }}</span>
       {{ end }}
     </div>
     {{ end }}
