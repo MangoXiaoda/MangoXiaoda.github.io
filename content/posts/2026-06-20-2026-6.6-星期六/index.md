@@ -6,7 +6,7 @@ lastmod: ''
 author: 夏天去旅行
 cover: /img/uploads/微信图片_20260620213444_49_41.jpg
 categories:
-  - 闲言碎语
+  - 随记
 tags:
   - 朋友
 ---
